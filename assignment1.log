@@ -1,7 +1,7 @@
 
-INFO:root:This is my first code
+
 INFO:root:Hello Python
 INFO:root:(8, -2, 0.6, 15)
-INFO:root:(20, 10)
-INFO:root:0.6266659959319439
-INFO:root:10.0
+INFO:root:100.0
+INFO:root:(53, 43)
+INFO:root:0.1301781026870058
