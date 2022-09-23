@@ -1,0 +1,4 @@
+INFO:root:12
+INFO:root:6
+INFO:root:('0b101011000 in binary.', '0o530 in octal.', '0x158 in hexadecimal.')
+INFO:root:("The ASCII value of 'g' is", 103)

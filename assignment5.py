@@ -1,3 +1,8 @@
+import logging
+logging.basicConfig(filename='assignment5.log',level=logging.INFO)
+
+
+
 #1. Write a Python Program to Find LCM?
 def lcm(x, y):
   if x>y:
@@ -10,8 +15,9 @@ def lcm(x, y):
           break
       z += 1
   return lcm
-print(lcm(4, 6))
-print(lcm(15, 17))
+#print(lcm(4, 6))
+#print(lcm(15, 17))
+logging.info(lcm(4,6))
 
 
 #2. Write a Python Program to Find HCF?
@@ -26,31 +32,36 @@ def compute_hcf(x, y):
     return hcf
 num1 = 54
 num2 = 24
-print("The H.C.F. is", compute_hcf(num1, num2))
+#print("The H.C.F. is", compute_hcf(num1, num2))
+logging.info(compute_hcf(num1,num2))
+
 
 
 #3. Write a Python Program to Convert Decimal to Binary, Octal and Hexadecimal?
-dec = 344
-print("The decimal value of", dec, "is:")
-print(bin(dec), "in binary.")
-print(oct(dec), "in octal.")
-print(hex(dec), "in hexadecimal.")
+def con():
+    dec = 344
+#return ("The decimal value of", dec, "is:")
+    bin1=bin(dec)+" in binary."
+    oct1=oct(dec) + " in octal."
+    hex1=hex(dec) + " in hexadecimal."
+    return  bin1,oct1,hex1
+logging.info(con())
 
 
 #4. Write a Python Program To Find ASCII value of a character?
 def ascii():
     ch = 'g'
     return("The ASCII value of '" + ch + "' is", ord(ch))
-print(ascii())
+logging.info(ascii())
 
 
 
 
 #5. Write a Python Program to Make a Simple Calculator with 4 basic mathematical operations?
+
 import tkinter as tk
 import tkinter.messagebox
 from tkinter.constants import SUNKEN
-
 window = tk.Tk()
 window.title('Calculator-GeeksForGeeks')
 frame = tk.Frame(master=window, bg="skyblue", padx=200)
@@ -70,8 +81,8 @@ def equal():
         tkinter.messagebox.showinfo("Error", "Syntax Error")
 def clear():
     entry.delete(0, tk.END)
-
-button_1 = tk.Button( master=frame,text='1', padx=15,pady=5, width=3,fg='green', command=lambda: myclick(1))
+#fg='green' gives colour
+button_1 = tk.Button( master=frame,text='1', padx=15,pady=5, width=3, command=lambda: myclick(1))
 button_1.grid(row=1, column=0)
 button_2 = tk.Button(master=frame, text='2', padx=15,pady=5, width=3, command=lambda: myclick(2))
 button_2.grid(row=1, column=1)
